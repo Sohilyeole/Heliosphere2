@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.marker-3d-animation {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+  animation: bounce 2s infinite;
+  transform: translateY(-10px);
+}
+
+.city-highlight {
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* Update the chat bubble animations */
+.bubble-enter {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.bubble-enter-active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.bubble-exit {
+  transform: scale(1);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.bubble-exit-active {
+  transform: scale(0.9);
+  opacity: 0;
+}

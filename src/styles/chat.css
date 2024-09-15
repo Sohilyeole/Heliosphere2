@@ -1,0 +1,150 @@
+/* Chatbot Dot */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px;  /* Adjust as needed */
+  z-index: 1000;
+}
+
+.chatbot-dot {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #007bff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+.chatbot-dot:hover {
+  background: #0056b3;
+}
+
+.chatbot-dot-icon {
+  font-size: 24px;
+}
+
+/* Chatbot Popup */
+.chatbot-popup {
+  position: absolute;
+  bottom: 70px; /* Adjust as needed */
+  right: 0;
+  width: 300px;
+  max-height: 400px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd; /* Optional border for better visibility */
+}
+
+.chatbot-header {
+  background: #007bff;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.chatbot-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chatbot-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chatbot-button:hover {
+  background: #0056b3;
+}
+
+/* Chat Bubble Styles */
+.chat-bubble {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  max-width: 80%;
+  align-self: flex-start;
+  position: relative;
+}
+
+.chat-bubble.user {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.chat-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f0f0f0 transparent;
+}
+
+.chat-bubble.user::after {
+  border-color: transparent transparent #007bff transparent;
+}
+
+/* Chatbot Footer */
+.chatbot-footer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chatbot-input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.chatbot-input:focus {
+  border-color: #007bff;
+}
+
+.chatbot-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chatbot-button:hover {
+  background: #0056b3;
+}
